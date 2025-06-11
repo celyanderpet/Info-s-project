@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HugoDécrypte — Parcours et Vidéos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #002147;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background-color: white;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .hero figure {
+      flex: 1 1 300px;
+      margin: 0;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero figcaption {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+    }
+
+    .hero .intro {
+      flex: 2 1 400px;
+    }
+
+    .section-title {
+      color: #002147;
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    .summary,
+    .details {
+      margin-bottom: 40px;
+    }
+
+    .summary ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .summary li {
+      margin-bottom: 10px;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+      margin-top: 20px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #ccc;
+    }
+
+    .event {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .event::before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      background-color: #002147;
+      border-radius: 50%;
+    }
+
+    .event h3 {
+      margin-bottom: 5px;
+      color: #002147;
+      font-size: 1.2rem;
+    }
+
+    .videos {
+      margin-top: 40px;
+    }
+
+    .videos p {
+      margin-bottom: 20px;
+    }
+
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .videos-grid iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .videos-grid figcaption {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #002147;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HugoDécrypte</h1>
+    <p>Journaliste indépendant et créateur de contenu (Depuis 2018)</p>
+  </header>
+
+  <div class="container">
+    <!-- Section Héroïque -->
+    <section class="hero">
+      <figure>
+        <img src="https://images.bfmtv.com/za4rFNpaOASwqqexeJY446fFioQ=/0x0:1920x1080/1920x0/images/Hugo-Travers-Hugo-Decrypte-devant-la-commission-d-enquete-sur-les-effets-psychologiques-de-Tiktok-le-3-juin-2025-2091570.jpg" alt="Photo de HugoDécrypte">
+        <figcaption>Hugo Travers alias HugoDécrypte</figcaption>
+      </figure>
+      <div class="intro">
+        <h2 class="section-title">Qui est HugoDécrypte ?</h2>
+        <p>Hugo Travers, connu sous le pseudonyme HugoDécrypte, est un journaliste digital français. Depuis 2018, il informe chaque jour sa communauté sur l’actualité politique, économique et sociale via ses vidéos courtes et accessibles sur YouTube, Instagram et TikTok.</p>
+      </div>
+    </section>
+
+    <!-- Résumé de l'activité -->
+    <section class="summary">
+      <h2 class="section-title">Résumé de son parcours</h2>
+      <p>En quelques points clés :</p>
+      <ul>
+        <li><strong>2018 :</strong> Lancement de la chaîne YouTube HugoDécrypte.</li>
+        <li><strong>2019 :</strong> Première vidéo quotidienne pour décrypter l’information en moins de 2 minutes.</li>
+        <li><strong>2020 :</strong> Participation à plusieurs médias (France 24, Brut) en tant que spécialiste de l’info courte.</li>
+        <li><strong>2021 :</strong> Atteinte du million d’abonnés sur YouTube.</li>
+        <li><strong>2023 :</strong> Création du think tank « Décryptage Citoyen » pour promouvoir l’éducation aux médias.</li>
+      </ul>
+    </section>
+
+    <!-- Détails chronologiques -->
+    <section class="details" id="histoire">
+      <h2 class="section-title">Moments marquants</h2>
+      <div class="timeline">
+        <div class="event">
+          <h3>2018</h3>
+          <p>Première vidéo : résumé de l’actualité du jour en format vertical pour réseaux sociaux.</p>
+        </div>
+        <div class="event">
+          <h3>2020</h3>
+          <p>Collaboration avec Brut et France 24 pour des formats spéciaux.</p>
+        </div>
+        <div class="event">
+          <h3>2021</h3>
+          <p>1 000 000 abonnés sur YouTube et lancement de newsletters quotidiennes.</p>
+        </div>
+        <div class="event">
+          <h3>2023</h3>
+          <p>Création de « Décryptage Citoyen », plateforme d’éducation aux médias et débats publics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extraits Vidéo -->
+    <section class="videos" id="videos">
+      <h2 class="section-title">Vidéos phares</h2>
+      <p>Quelques exemples de vidéos qui ont marqué sa chaîne :</p>
+      <div class="videos-grid">
+        <figure>
+          <iframe src="https://www.youtube.com/embed/rtiwu-Af7zs?si=Yywcf37KpWHi1zyy" allowfullscreen title="Actualité du jour"></iframe>
+          <figcaption>Décryptage de l’actualité quotidienne.</figcaption>
+        </figure>
+        <figure>
+          <iframe src="https://www.youtube.com/embed/_bz_rq5eEnc?si=3tEDLntScEyiZ5Un" allowfullscreen title="Débat citoyen"></iframe>
+          <figcaption>Extrait de débat sur l’engagement citoyen.</figcaption>
+        </figure>
+        <figure>
+          <iframe src="https://www.youtube.com/embed/zNR9EPTC8zY?si=vu12aXVBZwlB1z9B" allowfullscreen title="Tuto médias"></iframe>
+          <figcaption>Tutoriel sur la vérification des sources.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 HugoDécrypte — Tous droits réservés
+  </footer>
+</body>
+</html>
