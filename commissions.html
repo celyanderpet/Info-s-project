@@ -2,13 +2,12 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil - Assemblée Nationale</title>
+  <title>Commissions - Assemblée Nationale</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
+      margin: 0;
+      background-color: #f4f4f4;
       color: #333;
     }
 
@@ -17,12 +16,6 @@
       color: white;
       padding: 20px 0;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
     }
 
     nav {
@@ -36,7 +29,6 @@
       padding: 15px 25px;
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s;
     }
 
     nav a:hover {
@@ -45,22 +37,33 @@
 
     main {
       padding: 40px 20px;
-      text-align: center;
-    }
-
-    .intro {
       max-width: 800px;
-      margin: 0 auto;
+      margin: auto;
     }
 
-    .intro h2 {
-      font-size: 2em;
+    h2 {
       color: #004080;
+      margin-bottom: 20px;
     }
 
-    .intro p {
-      font-size: 1.1em;
-      line-height: 1.6;
+    .commission {
+      background-color: white;
+      border-left: 5px solid #004080;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .commission a {
+      text-decoration: none;
+      color: #004080;
+      font-weight: bold;
+      font-size: 1.2em;
+      transition: color 0.2s;
+    }
+
+    .commission a:hover {
+      color: #002147;
     }
 
     footer {
@@ -75,24 +78,27 @@
 <body>
 
   <header>
-    <h1>Assemblée Nationale</h1>
+    <h1>Commissions Parlementaires</h1>
   </header>
 
   <nav>
+    <a href="index.html">Accueil</a>
     <a href="deputes.html">Députés</a>
     <a href="lois.html">Lois</a>
-    <a href="commissions.html">Commissions</a>
     <a href="contact.html">Contact</a>
   </nav>
 
   <main>
-    <div class="intro">
-      <h2>Bienvenue sur le site de l'Assemblée Nationale</h2>
-      <p>
-        Ce site vous permet de découvrir le fonctionnement de l'Assemblée, consulter les projets de loi en cours,
-        accéder aux informations sur vos députés et suivre les travaux parlementaires.
-      </p>
+    <h2>Dernière commission</h2>
+
+    <div class="commission">
+      <a href="commission-tiktok.html">
+        Commission d’enquête sur les effets psychologiques de TikTok sur les mineurs
+      </a>
+      <p>Date de création : 5 juin 2025</p>
+      <p>Objet : Étudier les impacts de l’utilisation de TikTok sur la santé mentale des enfants et adolescents en France.</p>
     </div>
+
   </main>
 
   <footer>
