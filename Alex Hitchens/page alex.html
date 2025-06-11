@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Hitchens — Commission d'enquête</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; color: #333; background: #f4f6f8; line-height: 1.6; }
+    header { background: linear-gradient(135deg, #1a73e8, #4285f4); color: white; padding: 60px 20px; text-align: center; }
+    header h1 { font-weight: 700; font-size: 2.5rem; }
+    header p { margin-top: 10px; font-size: 1.1rem; }
+    .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+    .hero { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-bottom: 50px; }
+    .hero figure { flex: 1 1 300px; margin: 0; }
+    .hero img { width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .hero figcaption { margin-top: 8px; font-size: 0.9rem; color: #555; text-align: center; }
+    .hero .intro { flex: 2 1 400px; }
+    .section-title { color: #1a73e8; margin-bottom: 20px; font-weight: 700; }
+    .summary, .details { margin-bottom: 40px; }
+    .timeline { position: relative; margin: 40px 0; padding-left: 30px; }
+    .timeline::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 4px; background: #ddd; }
+    .event { position: relative; margin-bottom: 30px; padding-left: 20px; }
+    .event::before { content: ''; position: absolute; left: -5px; top: 5px; width: 14px; height: 14px; background: #4285f4; border-radius: 50%; }
+    .event h3 { margin-bottom: 5px; font-size: 1.2rem; color: #1a73e8; }
+    .videos { margin-top: 40px; }
+    .videos p { margin-bottom: 20px; }
+    .videos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 20px; }
+    .videos-grid figure { margin: 0; }
+    .videos-grid iframe { width: 100%; height: 200px; border: none; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .videos-grid figcaption { margin-top: 8px; font-size: 0.9rem; color: #555; text-align: center; }
+    footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #777; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Alex Hitchens</h1>
+    <p>Expert en cybersécurité — Audition devant la Commission d'enquête (10 juin 2025)</p>
+  </header>
+
+  <div class="container">
+    <!-- Section Héroïque -->
+    <section class="hero">
+      <figure>
+        <img src="data:image/jpeg;base64,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" alt="Photo de Alex Hitchens lors de son audition">
+        <figcaption>Alex Hitchens photo venant de son compte instagram</figcaption>
+      </figure>
+      <div class="intro">
+        <h2 class="section-title">Qui est Alex Hitchens ?</h2>
+        <p>Consultant en cybersécurité depuis plus de 15 ans, Alex Hitchens a travaillé avec des institutions internationales pour renforcer la défense des réseaux critiques. Son expertise porte notamment sur la détection des vulnérabilités, la réponse aux incidents et la formation des équipes techniques.</p>
+      </div>
+    </section>
+
+    <!-- Résumé de l'audition -->
+    <section class="summary">
+      <h2 class="section-title">Résumé de son audition</h2>
+      <p>Lors de son passage devant la Commission d'enquête, Alex Hitchens a présenté :</p>
+      <ul>
+        <li><strong>Analyse des menaces :</strong> Il a détaillé les méthodes d'attaque récentes touchant les administrations publiques, insistant sur l'utilisation de malwares sophistiqués et de campagnes de phishing ciblées.</li>
+        <li><strong>Points de vulnérabilité :</strong> Identification des failles dans les systèmes d'information, en particulier le manque de mises à jour régulières et l'absence de surveillance proactive.</li>
+        <li><strong>Recommandations :</strong> Mise en place d'un SOC (Security Operations Center) dédié, formation continue des équipes, et adoption de normes internationales comme ISO 27001.</li>
+        <li><strong>Plan de déploiement :</strong> Proposition d'un calendrier en trois phases : audit initial (3 mois), renforcement des défenses (6 mois), et exercices de simulation annuels.</li>
+      </ul>
+    </section>
+
+    <!-- Détails chronologiques -->
+    <section class="details" id="histoire">
+      <h2 class="section-title">Son parcours en bref</h2>
+      <div class="timeline">
+        <div class="event">
+          <h3>2008</h3>
+          <p>Entrée chez <em>CyberTech</em>, où il coordonne la sécurisation des infrastructures de plusieurs ministères.</p>
+        </div>
+        <div class="event">
+          <h3>2015</h3>
+          <p>Création de son cabinet <em>Hitchens Secure</em>, intervenant pour l'UE et l'OTAN sur des projets de cyberdéfense.</p>
+        </div>
+        <div class="event">
+          <h3>2022</h3>
+          <p>Publication d'un rapport clé sur la résistance des réseaux gouvernementaux aux cyberattaques de grande ampleur.</p>
+        </div>
+        <div class="event">
+          <h3>10 juin 2025</h3>
+          <p>Audition devant la Commission d'enquête de l'Assemblée Nationale pour expliquer et proposer des solutions concrètes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extraits Vidéo -->
+    <section class="videos" id="videos">
+      <h2 class="section-title">Extraits vidéo de l'audition</h2>
+      <p>Trois moments forts de son intervention :</p>
+      <div class="videos-grid">
+        <figure>
+          <iframe src="https://www.youtube.com/embed/emWPEn-xVD8" allowfullscreen title="Extrait 1"></iframe>
+          <figcaption>Introduction et contexte de la mission.</figcaption>
+        </figure>
+        <figure>
+          <iframe src="https://www.youtube.com/embed/jNnFTkH422I" allowfullscreen title="Extrait 2"></iframe>
+          <figcaption>Discussion sur le calendrier de mise en place des mesures.</figcaption>
+        </figure>
+        <figure>
+          <iframe src="https://www.youtube.com/embed/h8vxt4iG3bo" allowfullscreen title="Extrait 3"></iframe>
+          <figcaption>Question sur la formation et le maintien des compétences des équipes.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Assemblée Nationale — Tous droits réservés
+  </footer>
+</body>
+</html>

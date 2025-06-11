@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HugoDécrypte — Parcours et Vidéos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; color: #333; background: #f4f6f8; line-height: 1.6; }
+    header { background: linear-gradient(135deg, #ff4b2b, #ff416c); color: white; padding: 60px 20px; text-align: center; }
+    header h1 { font-weight: 700; font-size: 2.5rem; }
+    header p { margin-top: 10px; font-size: 1.1rem; }
+    .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+    .hero { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-bottom: 50px; }
+    .hero figure { flex: 1 1 300px; margin: 0; }
+    .hero img { width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .hero figcaption { margin-top: 8px; font-size: 0.9rem; color: #555; text-align: center; }
+    .hero .intro { flex: 2 1 400px; }
+    .section-title { color: #ff416c; margin-bottom: 20px; font-weight: 700; }
+    .summary, .details { margin-bottom: 40px; }
+    .timeline { position: relative; margin: 40px 0; padding-left: 30px; }
+    .timeline::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 4px; background: #ddd; }
+    .event { position: relative; margin-bottom: 30px; padding-left: 20px; }
+    .event::before { content: ''; position: absolute; left: -5px; top: 5px; width: 14px; height: 14px; background: #ff416c; border-radius: 50%; }
+    .event h3 { margin-bottom: 5px; font-size: 1.2rem; color: #ff416c; }
+    .videos { margin-top: 40px; }
+    .videos p { margin-bottom: 20px; }
+    .videos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 20px; }
+    .videos-grid figure { margin: 0; }
+    .videos-grid iframe { width: 100%; height: 200px; border: none; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .videos-grid figcaption { margin-top: 8px; font-size: 0.9rem; color: #555; text-align: center; }
+    footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #777; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HugoDécrypte</h1>
+    <p>Journaliste indépendant et créateur de contenu (Depuis 2018)</p>
+  </header>
+
+  <div class="container">
+    <!-- Section Héroïque -->
+    <section class="hero">
+      <figure>
+        <img src="data:image/jpeg;base64,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" alt="Photo de HugoDécrypte">
+        <figcaption>Hugo Travers alias HugoDécrypte</figcaption>
+      </figure>
+      <div class="intro">
+        <h2 class="section-title">Qui est HugoDécrypte ?</h2>
+        <p>Hugo Travers, connu sous le pseudonyme HugoDécrypte, est un journaliste digital français. Depuis 2018, il informe chaque jour sa communauté sur l’actualité politique, économique et sociale via ses vidéos courtes et accessibles sur YouTube, Instagram et TikTok.</p>
+      </div>
+    </section>
+
+    <!-- Résumé de l'activité -->
+    <section class="summary">
+      <h2 class="section-title">Résumé de son parcours</h2>
+      <p>En quelques points clés :</p>
+      <ul>
+        <li><strong>2018 :</strong> Lancement de la chaîne YouTube HugoDécrypte.</li>
+        <li><strong>2019 :</strong> Première vidéo quotidienne pour décrypter l’information en moins de 2 minutes.</li>
+        <li><strong>2020 :</strong> Participation à plusieurs médias (France 24, Brut) en tant que spécialiste de l’info courte.</li>
+        <li><strong>2021 :</strong> Atteinte du million d’abonnés sur YouTube.</li>
+        <li><strong>2023 :</strong> Création du think tank « Décryptage Citoyen » pour promouvoir l’éducation aux médias.</li>
+      </ul>
+    </section>
+
+    <!-- Détails chronologiques -->
+    <section class="details" id="histoire">
+      <h2 class="section-title">Moments marquants</h2>
+      <div class="timeline">
+        <div class="event">
+          <h3>2018</h3>
+          <p>Première vidéo : résumé de l’actualité du jour en format vertical pour réseaux sociaux.</p>
+        </div>
+        <div class="event">
+          <h3>2020</h3>
+          <p>Collaboration avec Brut et France 24 pour des formats spéciaux.</p>
+        </div>
+        <div class="event">
+          <h3>2021</h3>
+          <p>1 000 000 abonnés sur YouTube et lancement de newsletters quotidiennes.</p>
+        </div>
+        <div class="event">
+          <h3>2023</h3>
+          <p>Création de « Décryptage Citoyen », plateforme d’éducation aux médias et débats publics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extraits Vidéo -->
+    <section class="videos" id="videos">
+      <h2 class="section-title">Vidéos phares</h2>
+      <p>Quelques exemples de vidéos qui ont marqué sa chaîne :</p>
+      <div class="videos-grid">
+        <figure>
+          <iframe src="https://www.youtube.com/embed/rtiwu-Af7zs?si=Yywcf37KpWHi1zyy" allowfullscreen title="Actualité du jour"></iframe>
+          <figcaption>Décryptage de l’actualité quotidienne.</figcaption>
+        </figure>
+        <figure>
+          <iframe src="https://www.youtube.com/embed/_bz_rq5eEnc?si=3tEDLntScEyiZ5Un" allowfullscreen title="Débat citoyen"></iframe>
+          <figcaption>Extrait de débat sur l’engagement citoyen.</figcaption>
+        </figure>
+        <figure>
+          <iframe src="https://www.youtube.com/embed/zNR9EPTC8zY?si=vu12aXVBZwlB1z9B" allowfullscreen title="Tuto médias"></iframe>
+          <figcaption>Tutoriel sur la vérification des sources.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 HugoDécrypte — Tous droits réservés
+  </footer>
+</body>
+</html>
