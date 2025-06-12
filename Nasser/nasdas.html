@@ -89,6 +89,23 @@
 
 
   <main>
+    <audio id="audio" autoplay>
+    <source src="d58f9d1a-e978-47e0-b40b-c6389a4f2ee3.mp3" type="audio/mp3">
+    Ton navigateur ne supporte pas l'audio.
+  </audio>
+
+  <script>
+    window.addEventListener('load', function() {
+      const audio = document.getElementById('audio');
+      const playPromise = audio.play();
+     
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.log("Lecture refusée (souvent à cause du navigateur) :", error);
+        });
+      }
+    });
+  </script>
     <section>
       <h2>Résumé</h2>
       <p>Nasdas, de son vrai nom Nasser Sari, est un influenceur franco-algérien originaire du quartier Saint-Jacques de Perpignan. Il est le Snapchatteur le plus suivi de France grâce à ses vidéos de terrain et à son style direct. Il revendique jusqu’à 41 000 $ de revenus par jour, qu’il redistribue en grande partie à sa communauté locale, ce qui lui vaut le surnom de « Robin des Bois digital ». Son succès s’accompagne de polémiques liées à son passé d’officier de police judiciaire et à un jeu-concours bancaire.</p>
